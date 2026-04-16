@@ -1,0 +1,152 @@
+/* 1. 폰트연결*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+@import url('https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/variable/woff2/SUIT-Variable.css');
+
+/* 2. 리셋 스타일*/
+* {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    display: inline-block;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* 3. 문자 스타일*/
+body {
+    font-family: 'SUIT Variable';
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 70px;
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+h6 {
+    font-size: 14px;
+    opacity: 0.5;
+    font-weight: 600;
+}
+
+p {
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 0.6;
+}
+
+/* 4. 공통 스타일 , 버튼, 인풋*/
+
+.section-title {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto 45px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/*5. 해더 , 푸터*/
+html {
+    scroll-behavior: smooth;
+}
+
+.top-btn {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    z-index: 100;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+}
+/*해더 배너*/
+header .banner {
+    background-color: black;
+    color: white;
+    text-align: center;
+    line-height: 36px;
+}
+
+header .container {
+   
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+ background-color:black; opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+}
+/*해더 로고*/
+header .logo {
+    position: absolute;
+    left: 50px;
+}
+
+header .icon {
+    position: absolute;
+    right: 80px;
+    color: white;
+}
+/*해더 햄버튼*/
+header .ham {
+    position: absolute;
+    right: 50px;
+    width: 36px;
+    height: 36px;
+}
+
+header .menu{display: flex; gap: 20px;}
+header .ham .bar{display: block; width: 100%; height: 1px;
+background-color: white; position: absolute; top: 50%; left: 0;}
+header .ham .bar1{transform: translate(0,-10px);}
+header .ham .bar3{transform: translate(0,10px);}
+
+@media(max-width:1000px){
+header .container{height: 60px;}
+header .menu{display: none;}
+header .icon{right:20px; }
+header .fa-user{display: none;}
+header .fa-cart-shopping{display: none;}
+header .logo{left: 50%; transform: translate(-50%,0);}
+}
+header .ham{right: auto; left: 20px;}
