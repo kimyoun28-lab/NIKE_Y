@@ -3,11 +3,17 @@ main {
     color: white;
     height: 100vh;
     text-align: left;
+    overflow: hidden;
 }
 
-main img {
-    height: 100%;
-    object-fit: cover;
+
+main .video
+{  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
 
 main .bg {
@@ -18,7 +24,7 @@ main .bg {
     left: 0;
     background-color: black;
     background-image: (transparent 50%, black);
-    opacity: 0.5;
+    opacity: 0.4;
 }
 
 main .text-box {
@@ -479,7 +485,7 @@ main .btn {
 .section6 .container {
     max-width: 100%;
     width: 100%;
-    height: 100vh;
+
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -494,11 +500,11 @@ main .btn {
     text-align: center;
 }
 
-.section6 .left img {
-    height: 100%;
+.section6  img {
+    max-height: 100vh; height: 100%;
     object-fit: cover;
 }
-
+.section6 .img-box{height:100%}
 .section6 .right {
     height: 100%;
     object-fit: cover;
@@ -565,7 +571,7 @@ main .btn {
 .section6 .text {
     font-size: 20px;
     position: absolute;
-    right: 0;
+    right: 15px;
     top: 80px;
     color: black;
     text-transform: uppercase;
@@ -580,7 +586,7 @@ main .btn {
     }
 
     .section6 .item {
-        height: auto;
+        height: auto; 
     }
 
     .section6 .left {
@@ -590,6 +596,10 @@ main .btn {
     .section6 .item {
         align-items: start;
         padding: 30px;
+    }
+    .section6 .text{font-size: 12px;}
+
+    .section6 .color-box{padding-right: 20px;
     }
 }
 
@@ -610,7 +620,6 @@ main .btn {
 }
 
 .section7 .item {
-    border: 1px solid red;
     word-break: keep-all;
     flex-shrink: 0;
     /*단어끊김X ; 사이즈작아짐X ; 최소너비: 80px 유지*/
@@ -656,7 +665,7 @@ main .btn {
 }
 
 .section8 .item2 .text-box {
-    margin-top: 130px;
+    margin-top: 110px;
 }
 
 .section8 .container {
@@ -669,10 +678,12 @@ main .btn {
 
 .section8 .item {
     overflow: hidden;
+    grid-auto-rows: 250px;
 }
 
+.section8 .item6-bg{background-color: rgba(0, 0, 0, 0.5);}
 .section8 .item6 {
-    background: url(img/8-6배경.png);
+    background: url(img/8=3png.png);
 }
 
 .section8 .item-inner {
@@ -680,9 +691,17 @@ main .btn {
     z-index: 2;
 }
 
+/*섹션8 아이템6번 사진밑에 버튼2개*/
+.section8 .btn-box{ position: absolute; bottom: 0; left: 35px; 
+display: flex; justify-content: center; align-items: center; gap: 30px;
+color: black;
+}
+.section8 .btn1{background-color:white; padding: 10px; border-radius: 20px; border: 1px solid black; }
+.section8 .btn2{background-color: white; padding: 10px;  border-radius: 20px;border: 1px solid black;}
+
 .section8 .img-box {
     display: flex;
-    gap: 40px;
+    gap: 65px;
     padding: 60px;
 }
 
@@ -709,7 +728,7 @@ main .btn {
     width: 100%;
     height: 100%;
     background-image: linear-gradient(black, transparent);
-    opacity: 0.5;
+    opacity: 0.1;
 }
 
 
@@ -745,14 +764,23 @@ main .btn {
     .section8 .container {
         grid-auto-rows: 200px;
     }
+
+  
+    
 }
 
 @media(max-width:800px) {
     .section8 .container {
-        grid-template-columns: 1fr;
-    }
-
-    .section8 .item {
-        grid-row: auto;
-    }
+        grid-template-columns: 1fr 1fr;}
+ 
+   .section8 p{display: none;}
+   .section8 h4{font-size: 14px;}
+   
+      .section8 .item{
+    aspect-ratio: 1; 
 }
+.section8 .text-box{}
+    .section8 .item1, .item3, .item4{grid-row: auto;}
+     }
+
+
